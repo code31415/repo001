@@ -1,6 +1,17 @@
+body {
+	background: #558C89;
+}
+
 .container-narrow {
-	background: none repeat scroll 0 0 lightblue;
-	margin: 0 auto;
+	background: white;
+	margin: 100px auto 50px;
 	max-width: 900px;
 	padding-bottom: 40px;
+	border-radius: 10px;
+}
+
+.book-li-item {
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-top: 10px;
 }
