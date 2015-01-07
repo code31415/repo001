@@ -69,6 +69,29 @@ environments {
     }
 }
 
+simpleCaptcha {
+    // font size used in CAPTCHA images
+    fontSize = 16
+    height = 150
+
+    width = 400
+
+    // number of characters in CAPTCHA text
+    length = 6
+
+    // amount of space between the bottom of the CAPTCHA text and the bottom of the CAPTCHA image
+    bottomPadding = 14
+
+    // distance between the diagonal lines used to obfuscate the text
+    lineSpacing = 6
+
+    // the charcters shown in the CAPTCHA text must be one of the following
+    chars = "1234567890"
+
+    // this param will be passed as the first argument to this java.awt.Font constructor // http://docs.oracle.com/javase/6/docs/api/java/awt/Font.html#Font(java.lang.String,%20int,%20int)
+    font = "Serif"
+}
+
 // log4j configuration
 log4j = {
     // Example of changing the log pattern for the default console appender:

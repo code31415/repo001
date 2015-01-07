@@ -9,6 +9,7 @@ body {
 	background: #E8C291;
 	opacity: 0.65;
 	width: 850px;
+	min-width: 850px;
 	min-height: 100px;
 	margin: 50px auto 50px;
 	box-shadow: 0 0 15px #333;
@@ -56,6 +57,7 @@ body {
 	border-radius: 4px;
 	margin: 20px auto 50px;
 	width: 850px;
+	min-width: 850px;
 	box-shadow: 0 0 15px #333;
 	padding-bottom: 40px;
 }
@@ -151,5 +153,6 @@ body {
 
 .alert {
 	width: 850px;
+	min-width: 850px;
 	margin: 0 auto;
 }

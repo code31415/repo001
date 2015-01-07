@@ -7,6 +7,8 @@ class FrontendController {
 
     def bookService
 
+    def simpleCaptchaService
+
     def index() {
         def books = bookService.list()
 
@@ -20,11 +22,18 @@ class FrontendController {
     }
 
     def create() {
-
+        [book: new Book()]
     }
 
     def save() {
         Book book = new Book()
+        bindData(book, [name: params.name, author: params.author])
+        book.validate()
+        boolean captchaValid = simpleCaptchaService.validateCaptcha(params.captcha)
+        if (book.hasErrors() || !captchaValid  || !book.save(flush: true)) {
+            render(view: 'create', model: [book: book, captchaValid: captchaValid])
+            return
+        }
 
         flash.success = 'Книга сохранена. Появится в рейтинге после успешной модерации. Спасибо за участие!'
         redirect(action: 'index')
