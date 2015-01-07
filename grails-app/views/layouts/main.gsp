@@ -11,14 +11,26 @@
 	<link rel="apple-touch-icon" sizes="114x114" href="${resource(dir: 'images', file: 'apple-touch-icon-retina.png')}">
 	<link rel="stylesheet" href="${resource(dir: 'css', file: 'bootstrap.min.css')}" type="text/css">
 	<link rel="stylesheet" href="${resource(dir: 'css', file: 'main.css')}" type="text/css">
+
 		<g:layoutHead/>
 		<r:layoutResources />
 	</head>
 	<body>
 		<div class="header">
 			<h1>
-				Рейтинг
+				Рейтинг детских книг
 			</h1>
+			<ul class="menu">
+				<li>
+					<a href="#">Рейтинг</a>
+				</li>
+				<li>
+					<a href="#">Добавить книгу</a>
+				</li>
+				<li>
+					<a href="#">О проекте</a>
+				</li>
+			</ul>
 		</div>
 		<div class="container-narrow">
 			<g:layoutBody/>
