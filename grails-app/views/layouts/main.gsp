@@ -22,7 +22,7 @@
 			</h1>
 			<ul class="menu">
 				<li>
-					<a href="#">Рейтинг</a>
+					<g:link controller="frontend" action="index">Рейтинг</g:link>
 				</li>
 				<li>
 					<a href="#">Добавить книгу</a>
