@@ -3,9 +3,18 @@
  */
 class FrontendController {
 
-    def index() {
+    def bookService
 
+    def index() {
+        def books = bookService.list()
+
+        [books: books.list]
     }
 
+    def book() {
+        def book = Book.get(params.long('id'))
+
+        [book: book]
+    }
 
 }

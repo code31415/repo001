@@ -2,14 +2,12 @@
 <html>
 	<head>
 		<meta name="layout" content="main"/>
-		<title>Welcome to Grails</title>
-
 	</head>
 	<body>
 	<div class="left-column">
 	<div class="row-fluid">
 		<ul class="list-group">
-			<g:each in="${1..20}" var="i">
+			<g:each in="${books}" var="book">
 				<li class="book-li-item">
 					<span class="num">${i}</span>
 					<div class="pic">
@@ -17,10 +15,10 @@
 					</div>
 					<div class="info">
 						<span class="name">
-							<g:link action="show" controller="book">Республика ШКИД</g:link>
+							<g:link action="book" controller="frontend" id="${book.id}">${book.name.encodeAsHTML()}</g:link>
 						</span>
 						<span class="gray">
-						Белых, Г. Г.
+							${book.author.encodeAsHTML()}
 						</span>
 					</div>
 					<div class="clear"></div>
