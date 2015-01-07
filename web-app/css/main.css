@@ -1,17 +1,90 @@
 body {
-	background: #558C89;
+	background: url("../images/bg004.jpg") top center no-repeat #1A171E;
+
 }
 
+.header {
+	background: white;
+	opacity: 0.6;
+	width: 850px;
+	min-height: 100px;
+	margin: 50px auto 50px;
+	box-shadow: 0 0 15px #333;
+}
 .container-narrow {
 	background: white;
-	margin: 100px auto 50px;
-	max-width: 900px;
+	margin: 20px auto 50px;
+	width: 850px;
+	box-shadow: 0 0 15px #333;
 	padding-bottom: 40px;
-	border-radius: 10px;
+}
+
+.left-column {
+	width: 600px;
+}
+
+.right-column {
+	width: 250px;
 }
 
 .book-li-item {
 	margin-left: 10px;
 	margin-right: 10px;
-	margin-top: 10px;
+	border-top: none;
+	border-left: none;
+	border-right: none;
+	border-bottom: 1px dotted #ccc;
+	padding: 15px;
+	list-style: none;
+	position: relative;
+}
+
+.book-li-item .pic {
+	float: left;
+	/*overflow: hidden;*/
+	width: 58px;
+	margin-right: 10px;
+	margin-top: 3px;
+}
+
+.book-li-item .info {
+	float: left;
+}
+
+.book-li-item .info .name {
+	color: #007;
+	font-family: arial;
+	font-size: 12px;
+}
+
+.book-li-item .info .name a {
+	color: #007;
+	text-decoration: underline;
+}
+
+.book-li-item .info .gray {
+	color: #777;
+	display: block;
+	margin-bottom: 9px;
+	font-family: tahoma,verdana,arial;
+	font-size: 11px;
+}
+
+.book-li-item .num {
+	color: #777;
+	font-family: tahoma,verdana,arial;
+	font-size: 11px;
+	float: left;
+	margin-right: 10px;
+}
+
+.clear {
+	clear: both;
+	height: 1px;
+
+	margin: 0;
+	padding: 0;
+
+	font-size: 15px;
+	line-height: 1px;
 }

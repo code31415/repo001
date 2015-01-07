@@ -15,6 +15,11 @@
 		<r:layoutResources />
 	</head>
 	<body>
+		<div class="header">
+			<h1>
+				Рейтинг
+			</h1>
+		</div>
 		<div class="container-narrow">
 			<g:layoutBody/>
 

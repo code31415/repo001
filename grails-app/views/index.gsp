@@ -6,21 +6,28 @@
 
 	</head>
 	<body>
-	<div class="row-fluid">
-		<div class="span12">
-		<h1>Список</h1>
-		</div>
-	</div>
+	<div class="left-column">
 	<div class="row-fluid">
 		<ul class="list-group">
-			<g:each in="${1..20}">
-				<li class="list-group-item book-li-item">
-					<img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTTz0bEN_cVjUxGRoReN2ZwQmf5raxeNQwnuSZ0yhw4w5oT5jzTyQ"
-							height="100px"/>
-					Повесть о пионере Пете и о его друзьях: Лёше, Савве, Алисе, пожарнике Василии и двух студентах, приехавших к нам учиться из борющейся африканской республики, Мишеле и Андерсе.
+			<g:each in="${1..20}" var="i">
+				<li class="book-li-item">
+					<span class="num">${i}</span>
+					<div class="pic">
+						<img src="http://www.mdk-arbat.ru/small-book-image.php?id=799733" height="90px"/>
+					</div>
+					<div class="info">
+						<span class="name">
+							<g:link action="show" controller="book">Республика ШКИД</g:link>
+						</span>
+						<span class="gray">
+						Белых, Г. Г.
+						</span>
+					</div>
+					<div class="clear"></div>
 				</li>
 			</g:each>
 		</ul>
+	</div>
 	</div>
 	</body>
 </html>
