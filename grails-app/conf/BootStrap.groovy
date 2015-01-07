@@ -1,4 +1,5 @@
 import grails.util.Environment
+import ru.repo001.Book
 
 class BootStrap {
 
@@ -6,7 +7,7 @@ class BootStrap {
         Environment.executeForCurrentEnvironment {
             development {
                 30.times {
-                    Book book = new Book(name: "Повесть о ${it}", author: "Петров-${it} А.В.")
+                    Book book = new Book(name: "Повесть о ${it}", author: "Петров-${it} А.В.", active: true)
                     book.save(flush: true, failOnError: true)
                 }
             }

@@ -30,6 +30,17 @@
 				</li>
 			</ul>
 		</div>
+
+		<g:if test="${flash.success}">
+			<div role="alert" class="alert alert-success">
+				<span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span>
+				<strong>Успех!</strong>
+					${flash.success}
+				<button aria-label="Close" data-dismiss="alert" class="close" type="button"><span aria-hidden="true">×</span></button>
+			</div>
+		</g:if>
+
+
 		<div class="container-narrow">
 			<g:layoutBody/>
 

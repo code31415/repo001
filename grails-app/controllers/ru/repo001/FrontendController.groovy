@@ -1,3 +1,5 @@
+package ru.repo001
+
 /**
  * Created by Ivan on 07.01.2015.
  */
@@ -22,7 +24,10 @@ class FrontendController {
     }
 
     def save() {
+        Book book = new Book()
 
+        flash.success = 'Книга сохранена. Появится в рейтинге после успешной модерации. Спасибо за участие!'
+        redirect(action: 'index')
     }
 
     def about() {

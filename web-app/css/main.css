@@ -148,3 +148,8 @@ body {
 .book-form {
 	padding: 15px;
 }
+
+.alert {
+	width: 850px;
+	margin: 0 auto;
+}
