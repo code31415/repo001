@@ -7,9 +7,9 @@
 	<div class="left-column">
 	<div class="row-fluid">
 		<ul class="list-group">
-			<g:each in="${books}" var="book">
+			<g:each in="${books}" var="book" status="i">
 				<li class="book-li-item">
-					<span class="num">${i}</span>
+					<span class="num">${i+1}</span>
 					<div class="pic">
 						<img src="http://www.mdk-arbat.ru/small-book-image.php?id=799733" height="90px"/>
 					</div>
@@ -27,5 +27,9 @@
 		</ul>
 	</div>
 	</div>
+	<div class="right-column">
+
+	</div>
+	<div class="clear"></div>
 	</body>
 </html>

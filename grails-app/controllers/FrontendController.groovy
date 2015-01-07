@@ -17,4 +17,15 @@ class FrontendController {
         [book: book]
     }
 
+    def create() {
+
+    }
+
+    def save() {
+
+    }
+
+    def about() {
+
+    }
 }

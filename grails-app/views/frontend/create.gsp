@@ -6,8 +6,8 @@
 <body>
 <div class="left-column">
     <div class="row-fluid">
-        <div class="book-info">
-            <h1>${book.name.encodeAsHTML()}</h1>
+        <div class="book-form">
+            <h1>Добавление новой книги</h1>
         </div>
     </div>
 </div>

@@ -9,6 +9,8 @@ class UrlMappings {
 
 		"/"(controller: 'frontend', action: 'index')
 		"/book"(controller: 'frontend', action: 'book')
+		"/create"(controller: 'frontend', action: 'create')
+		"/about"(controller: 'frontend', action: 'about')
 		"500"(view:'/error')
 	}
 }

@@ -7,7 +7,7 @@
 <div class="left-column">
     <div class="row-fluid">
         <div class="book-info">
-            <h1>${book.name.encodeAsHTML()}</h1>
+            <h1>О проекте</h1>
         </div>
     </div>
 </div>
