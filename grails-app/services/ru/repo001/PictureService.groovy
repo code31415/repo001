@@ -42,10 +42,19 @@ class PictureService {
         return path + getPictureFileName(picture.id) + getExtension(picture.contentType)
     }
 
-    def getFullPathToImage(Picture picture) {
+    /** Path to converted image */
+    def getPathToImageWithoutExtension(Picture picture) {
+        def dir = getDir(picture)
+        def path = grailsApplication.config.picture.upload.dir + dir
+        //make dirs
+        new File(path).mkdirs()
+        return path + getPictureFileName(picture.id)
+    }
+
+    def getUrlPathToImage(Picture picture) {
         def dir = getDir(picture)
         def path = grailsApplication.config.picture.url.prefix + dir
-        return path + picture.fileName
+        return path + getPictureFileName(picture.id)
     }
 
     /** Filename of saved picture */
@@ -74,7 +83,19 @@ class PictureService {
         picture.fileName = getPictureFileName(picture.id as int) + getExtension(picture.contentType)
         picture.save(flush: true, failOnError: true)
 
+        makeAllSizes(picture)
+
         picture
+    }
+
+    private makeAllSizes(Picture picture) {
+        File file = new File(getPathToImage(picture))
+
+        PictureSize.values().each { PictureSize pictureSize ->
+            String fileName = getPathToImageWithoutExtension(picture)
+            fileName = fileName + pictureSize.postfix + ".jpg"
+            ImageScaler.scaleImage2Jpeg(new FileInputStream(file), pictureSize.width, pictureSize.height, fileName)
+        }
     }
 
     private static String getExtension(String contentType) {

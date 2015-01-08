@@ -1,3 +1,4 @@
+<%@ page import="ru.repo001.PictureSize" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -55,7 +56,7 @@
                         <td>${book.id}</td>
                         <td>
                             <g:if test="${book.picture}">
-                                <img src="${g.picture(picture: book.picture)}" width="62"/>
+                                <img src="${g.picture(picture: book.picture, size: PictureSize.SMALL)}" />
                             </g:if>
                         </td>
                         <td>${book.name.encodeAsHTML()}</td>
