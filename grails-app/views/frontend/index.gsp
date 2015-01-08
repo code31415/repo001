@@ -1,3 +1,4 @@
+<%@ page import="ru.repo001.PictureSize" %>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -11,7 +12,9 @@
 				<li class="book-li-item">
 					<span class="num">${i+1}</span>
 					<div class="pic">
-						<img src="http://www.mdk-arbat.ru/small-book-image.php?id=799733" height="90px"/>
+						<g:if test="${book.picture}">
+							<img src="${g.picture(picture: book.picture, size: ru.repo001.PictureSize.SMALL)}" />
+						</g:if>
 					</div>
 					<div class="info">
 						<span class="name">

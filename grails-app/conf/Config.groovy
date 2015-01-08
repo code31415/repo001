@@ -63,7 +63,7 @@ environments {
     development {
         grails.logging.jul.usebridge = true
         picture.upload.dir = 'web-app/i/'
-        picture.url.prefix = '../i/'
+        picture.url.prefix = 'http://localhost:8080/repo001/i/'
 
     }
     production {
