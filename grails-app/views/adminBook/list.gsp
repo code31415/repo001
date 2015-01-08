@@ -41,6 +41,7 @@
                     <thead>
                     <tr>
                         <th style="width: 50px;">#</th>
+                        <th style="width: 70px;">Картинка</th>
                         <th>Название</th>
                         <th style="width: 20%;">Автор</th>
                         <th style="width: 50px">Рейтинг</th>
@@ -52,6 +53,11 @@
                     <g:each in="${books}" var="book">
                     <tr>
                         <td>${book.id}</td>
+                        <td>
+                            <g:if test="${book.picture}">
+                                <img src="${g.picture(picture: book.picture)}" width="62"/>
+                            </g:if>
+                        </td>
                         <td>${book.name.encodeAsHTML()}</td>
                         <td>${book.author.encodeAsHTML()}</td>
                         <td><g:formatNumber number="${book.rating}" maxFractionDigits="2" minFractionDigits="2"/></td>

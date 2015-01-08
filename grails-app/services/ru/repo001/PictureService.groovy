@@ -42,11 +42,11 @@ class PictureService {
         return path + getPictureFileName(picture.id) + getExtension(picture.contentType)
     }
 
-//    def getFullPathToImage(Picture picture) {
-//        def dir = getDir(picture)
-//        def path = grailsApplication.config.cdn.serverURL + grailsApplication.config.picture.url.prefix + dir
-//        return path + picture.fileName
-//    }
+    def getFullPathToImage(Picture picture) {
+        def dir = getDir(picture)
+        def path = grailsApplication.config.picture.url.prefix + dir
+        return path + picture.fileName
+    }
 
     /** Filename of saved picture */
     def getPictureFileName (pictureId) {

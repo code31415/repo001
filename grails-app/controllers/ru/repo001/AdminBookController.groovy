@@ -22,7 +22,6 @@ class AdminBookController {
         [book: book]
     }
 
-
     def update() {
         Book book = Book.get(params.long('id'))
         bindData(book, params)
@@ -32,9 +31,11 @@ class AdminBookController {
             render(view: 'edit', model: [book: book])
         }
 
-        if (params.pictureFile){
-            Picture picture = pictureService.savePicture(params.pictureFile)
-            book.picture = picture
+        if (params.pictureFile) {
+            if (params.pictureFile.getSize()) {
+                Picture picture = pictureService.savePicture(params.pictureFile)
+                book.picture = picture
+            }
         }
 
         flash.success = "книга успешно отредактирована"
