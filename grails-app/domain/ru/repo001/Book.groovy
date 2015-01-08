@@ -11,13 +11,16 @@ class Book {
 
     boolean active = false
 
+    Picture picture
+
     /* 0..10 */
     BigDecimal rating = new BigDecimal(1)
 
     static constraints = {
         name(nullable: false, blank: false, maxSize: 1024)
         author(nullable: false, blank: false, maxSize: 1024)
-        rating(nullable: false, min: 0.0)
+        rating(nullable: false, min: 0.0, max: 10.0)
+        picture(nullable: true)
     }
 
     /** Custom mapping */

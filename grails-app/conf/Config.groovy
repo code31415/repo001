@@ -62,10 +62,15 @@ grails.hibernate.cache.queries = false
 environments {
     development {
         grails.logging.jul.usebridge = true
+        picture.upload.dir = 'web-app/i/'
+        picture.url.prefix = '/i/'
+
     }
     production {
         grails.logging.jul.usebridge = false
         // TODO: grails.serverURL = "http://www.changeme.com"
+        picture.upload.dir = '/var/repo001/pictures/'
+        picture.url.prefix = '/i/'
     }
 }
 

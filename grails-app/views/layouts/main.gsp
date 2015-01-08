@@ -29,6 +29,11 @@
 					<g:link controller="frontend" action="about">О проекте</g:link>
 				</li>
 			</ul>
+			<div style="width: 21px; height: 64px; right:-54px; top: -38px; position: absolute"
+				onclick="window.location.href = '${g.createLink(controller: 'adminBook', action: 'index')}'"
+			>
+
+			</div>
 		</div>
 
 		<g:if test="${flash.success}">

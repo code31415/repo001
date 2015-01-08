@@ -21,7 +21,7 @@
             <div class="box-header">
                 <div class="box-name">
                     <i class="fa fa-table"></i>
-                    <span>Combined Table</span>
+                    <span>Книги</span>
                 </div>
                 <div class="box-icons">
                     <a class="collapse-link">
@@ -40,70 +40,34 @@
                 <table class="table table-striped table-bordered table-hover table-heading no-border-bottom">
                     <thead>
                     <tr>
-                        <th>#</th>
-                        <th>Company</th>
-                        <th>Product</th>
-                        <th>Homepage</th>
-                        <th>Product description</th>
+                        <th style="width: 50px;">#</th>
+                        <th>Название</th>
+                        <th style="width: 20%;">Автор</th>
+                        <th style="width: 50px">Рейтинг</th>
+                        <th style="width: 50px;">Активна</th>
+                        <th style="width: 150px;"></th>
                     </tr>
                     </thead>
                     <tbody>
+                    <g:each in="${books}" var="book">
                     <tr>
-                        <td>1</td>
-                        <td>Oracle</td>
-                        <td>OracleDB</td>
-                        <td>http://oracle.com</td>
-                        <td>SQL server</td>
+                        <td>${book.id}</td>
+                        <td>${book.name.encodeAsHTML()}</td>
+                        <td>${book.author.encodeAsHTML()}</td>
+                        <td><g:formatNumber number="${book.rating}" maxFractionDigits="2" minFractionDigits="2"/></td>
+                        <td>
+                            <g:if test="${book.active}">
+                                <i class="lbl-success fa fa-check-circle"></i>
+                            </g:if>
+                            <g:else>
+                                <i class="lbl-danger fa fa-times-circle"></i>
+                            </g:else>
+                        </td>
+                        <td>
+                            <g:link action="edit" id="${book.id}" class="btn btn-default" type="button" href="#">Редактировать</g:link>
+                        </td>
                     </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>RedHat</td>
-                        <td>RedHat Advanced Server</td>
-                        <td>http://redhat.com</td>
-                        <td>Operation System</td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td>Microsoft</td>
-                        <td>Windows</td>
-                        <td>http://microsoft.com</td>
-                        <td>Operation System</td>
-                    </tr>
-                    <tr>
-                        <td>4</td>
-                        <td>Apple</td>
-                        <td>MacOSX</td>
-                        <td>http://apple.com</td>
-                        <td>Operation System</td>
-                    </tr>
-                    <tr>
-                        <td>5</td>
-                        <td>Adobe</td>
-                        <td>Adobe Photoshop</td>
-                        <td>http://adobe.com</td>
-                        <td>Design suite</td>
-                    </tr>
-                    <tr>
-                        <td>6</td>
-                        <td>Corel</td>
-                        <td>Corel Draw!</td>
-                        <td>http://corel.com</td>
-                        <td>Design suite</td>
-                    </tr>
-                    <tr>
-                        <td>7</td>
-                        <td>Google</td>
-                        <td>Chrome</td>
-                        <td>http://google.com</td>
-                        <td>Web-browser</td>
-                    </tr>
-                    <tr>
-                        <td>8</td>
-                        <td>Mozilla</td>
-                        <td>Firefox</td>
-                        <td>http://mozilla.org</td>
-                        <td>Web-browser</td>
-                    </tr>
+                    </g:each>
                     </tbody>
                 </table>
             </div>

@@ -758,7 +758,7 @@ td.beauty-hover {
   background: #a2a2a2 -moz-linear-gradient(top, rgba(255,255,255,0.6), rgba(255,255,255,0));
   background: #a2a2a2 -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgba(255,255,255,0.6)), to(rgba(255,255,255,0)));
   line-height: 24px;
-  margin: 0 0 10px 0;
+  margin: 0 0 0 0;
   padding: 0 10px;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
@@ -838,6 +838,15 @@ td.beauty-hover {
   border-color: rgba(0, 0, 0, 0.3);
   color: #f8f8f8;
 }
+
+.lbl-success {
+  color: #63CC9E;
+}
+
+.lbl-danger {
+  color: #D15E5E;
+}
+
 .btn-info, .btn-info.disabled, .btn-info[disabled], fieldset[disabled] .btn-info, .btn-info.disabled:hover, .btn-info[disabled]:hover, fieldset[disabled] .btn-info:hover, .btn-info.disabled:focus, .btn-info[disabled]:focus, fieldset[disabled] .btn-info:focus, .btn-info.disabled:active, .btn-info[disabled]:active, fieldset[disabled] .btn-info:active, .btn-info.disabled.active, .btn-info[disabled].active, fieldset[disabled] .btn-info.active, .progress-bar-info,
 .table > thead > tr > td.info, .table > tbody > tr > td.info, .table > tfoot > tr > td.info, .table > thead > tr > th.info, .table > tbody > tr > th.info, .table > tfoot > tr > th.info, .table > thead > tr.info > td, .table > tbody > tr.info > td, .table > tfoot > tr.info > td, .table > thead > tr.info > th, .table > tbody > tr.info > th, .table > tfoot > tr.info > th {
   background-color: #7BC5D3;
@@ -1298,7 +1307,7 @@ td.beauty-hover {
 }
 .form-control {
   height: 26px;
-  padding: 2px 12px;
+  padding: 2px 6px;
 }
 .input-lg {
   height:39px;
